@@ -1,0 +1,9 @@
+name: Pipeline simple de ejemplo
+
+on: [push]
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "este es un job de ejemplo en GitHub"
