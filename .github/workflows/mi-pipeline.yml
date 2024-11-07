@@ -4,11 +4,21 @@ on: [push]
 
 jobs:
   saludo:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "este es un job de ejemplo en GitHub"
       - run: echo "finalizando job"
   despedida:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "cerrando"
+  yaml-code-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: checkout
+      - uses: bieggerm/yamale-action@v2
+        name: lint-yaml
+        with:
+          base_dir: ".github/workflows"
+          schema: ".lint/schema.yaml" 
