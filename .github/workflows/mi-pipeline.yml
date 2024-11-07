@@ -15,10 +15,8 @@ jobs:
   yaml-code-quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: checkout
-      - uses: bieggerm/yamale-action@v2
-        name: lint-yaml
+      - uses: actions/checkout@v3
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3
         with:
-          base_dir: ".github/workflows"
-          schema: ".lint/schema.yaml" 
+          file_or_dir: .github/workflows/*.yml
