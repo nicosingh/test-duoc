@@ -7,3 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "este es un job de ejemplo en GitHub"
+      - run: echo "finalizando job"
+  despedida:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "cerrando"
