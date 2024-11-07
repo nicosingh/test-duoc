@@ -4,11 +4,11 @@ on: [push]
 
 jobs:
   saludo:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - run: echo "este es un job de ejemplo en GitHub"
       - run: echo "finalizando job"
   despedida:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - run: echo "cerrando"
